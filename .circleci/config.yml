@@ -7,6 +7,7 @@ jobs:
       - checkout
       - run: 
           gradle test
+      - run:
           gradle jar
       - store_test_results:
           path: . 
