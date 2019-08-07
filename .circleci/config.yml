@@ -7,11 +7,13 @@ jobs:
       - checkout
       - run: 
           gradle test
+      - store_test_results:
+          path: .
       - run:
           gradle jar
       - store_test_results:
           path: . 
       - store_artifacts:
-          path: /code/test-results
+          path: .
           destination: prefix
          
